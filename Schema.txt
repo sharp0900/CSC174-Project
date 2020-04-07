@@ -1,0 +1,27 @@
+CSC 177 SCHEMA
+========================================
+
+PK = Primary Key
+FK = Foreign  Key
+
+Employee (Main Class):
+EmployeeID(PK), Fname, Mname, Lname, Sex, Ethnicity, Lang, phone
+
+Doctor (Sub Class):
+EmployeeID(PK), Specilization
+
+Nurse (Sub Class):
+EmployeeID(PK), Room_Number
+
+Secretary (Sub Class):
+EmployeeID(PK), AssignmentID
+
+Patient (Main Class):
+PaitentID, MRN, Fname, Mname, Lname, Sex, DOB, Ethnicity, Lang, Phone
+
+Appointment (Doctor and Patient):
+AppointmentID(PK), PaitentID(PK), EmployeeID(PK), Date, Reason, AssignmentID(FK)
+
+Looks_Over (Nurse and Patient):
+EmployeeID(PK), PaitentID(PK), AssignmentID(FK)
+
